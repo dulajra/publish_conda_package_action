@@ -31,10 +31,10 @@ do
 done
 
 # build the package
-conda build --output-folder /app/temp_build/ --py 3.6.1 $INPUT_CONDADIR
-conda build --output-folder /app/temp_build/ --py 3.7 $INPUT_CONDADIR
-conda build --output-folder /app/temp_build/ --py 3.8 $INPUT_CONDADIR
-conda build --output-folder /app/temp_build/ --py 3.9 $INPUT_CONDADIR
+conda build --output-folder temp_build/ $INPUT_CONDADIR
+#conda build --output-folder /app/temp_build/ --py 3.7 $INPUT_CONDADIR
+#conda build --output-folder /app/temp_build/ --py 3.8 $INPUT_CONDADIR
+#conda build --output-folder /app/temp_build/ --py 3.9 $INPUT_CONDADIR
 
 # convert package for each platforms
 #find temp_build/ -name *.tar.bz2 | while read file
