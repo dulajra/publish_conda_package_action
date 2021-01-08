@@ -37,14 +37,14 @@ conda build --output-folder /app/temp_build/ --py 3.8 $INPUT_CONDADIR
 conda build --output-folder /app/temp_build/ --py 3.9 $INPUT_CONDADIR
 
 # convert package for each platforms
-find temp_build/ -name *.tar.bz2 | while read file
-do
-    echo $file
-    for PLATFORM in "${PLATFORMS[@]}"
-    do
-        conda convert --force --platform $PLATFORM $file  -o temp_build/
-    done
-done
+#find temp_build/ -name *.tar.bz2 | while read file
+#do
+#    echo $file
+#    for PLATFORM in "${PLATFORMS[@]}"
+#    do
+#        conda convert --force --platform $PLATFORM $file  -o temp_build/
+#    done
+#done
 
 ##### Uploading on Anaconda Cloud #####
 echo ">>>> CONDA PACKAGE UPLOADING <<<<"
